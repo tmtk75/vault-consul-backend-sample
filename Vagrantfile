@@ -6,7 +6,8 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--memory", "512"]
   end
 
-  [0, 1, 2].each do |i|
+  VM_NUM = 1
+  (0 .. VM_NUM - 1).each do |i|
     config.vm.define "node#{i}" do |its|
       its.vm.network "private_network", ip: "192.168.50.20#{i}"
     end

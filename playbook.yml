@@ -5,6 +5,7 @@
   - role: consul
     consul_node_name: "{{ inventory_hostname_short }}"
     #consul_advertise_addr: "{{ ansible_default_ipv4.address }}"
+    consul_bootstrap_expect: 1
     server: true
 
   - role: vault

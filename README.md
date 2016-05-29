@@ -8,6 +8,12 @@
 ```
 $ vagrant up
 $ make playbook
-$ make consul-join
 $ make vault-init
+```
+
+To reset all
+```
+$ make vault-stop
+$ make consul-reset
+$ make vault-start
 ```
