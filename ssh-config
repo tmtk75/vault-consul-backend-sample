@@ -1,0 +1,33 @@
+Host node0
+  HostName 127.0.0.1
+  User vagrant
+  Port 2222
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile "/Users/tsakuma/vagrant-vault-cluster/.vagrant/machines/node0/virtualbox/private_key"
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Host node1
+  HostName 127.0.0.1
+  User vagrant
+  Port 2200
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile "/Users/tsakuma/vagrant-vault-cluster/.vagrant/machines/node1/virtualbox/private_key"
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Host node2
+  HostName 127.0.0.1
+  User vagrant
+  Port 2201
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile "/Users/tsakuma/vagrant-vault-cluster/.vagrant/machines/node2/virtualbox/private_key"
+  IdentitiesOnly yes
+  LogLevel FATAL
+

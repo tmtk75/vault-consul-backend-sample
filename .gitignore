@@ -1,0 +1,4 @@
+.*.swp
+.vagrant
+roles
+playbook.retry

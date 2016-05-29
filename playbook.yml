@@ -1,0 +1,28 @@
+- hosts: all
+  become: true
+
+  roles:
+  - role: consul
+    consul_node_name: "{{ inventory_hostname_short }}"
+    #consul_advertise_addr: "{{ ansible_default_ipv4.address }}"
+    server: true
+
+  - role: vault
+
+  tasks:
+  - name: hostname
+    hostname: name="{{ inventory_hostname_short }}"
+    tags:
+    - hostname
+
+  - name: firewalld disabled
+    service: name=firewalld state=stopped
+    tags:
+    - iptables
+
+  - name: 
+    lineinfile: dest=/home/vagrant/.bashrc
+                regexp=^VAULT_ADDR=
+                line="export VAULT_ADDR=http://127.0.0.1:8200/"
+    tags:
+    - bashrc

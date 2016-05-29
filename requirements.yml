@@ -1,0 +1,10 @@
+# from galaxy
+- src: https://github.com/tmtk75/ansible-consul
+  version: master
+  name: consul
+  path: roles
+
+- src: https://github.com/tmtk75/ansible-vault
+  version: master
+  name: vault
+  path: roles
